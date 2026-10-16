@@ -1,0 +1,9 @@
+Column,Missing_Values_Raw,Missing_After_Cleaning,Invalid_Values_Removed,Data_Type_After_Cleaning,Cleaning_Status
+InvoiceNo,0,0,0,object,No change
+StockCode,0,0,0,object,No change
+Description,71,0,0,object,Rows with missing Description removed
+Quantity,0,0,0,int64,Negative quantities retained for review
+InvoiceDate,0,0,0,datetime64[ns],Converted to datetime
+UnitPrice,0,0,65,float64,Zero UnitPrice records removed
+CustomerID,6653,6517,0,float64,Missing values retained
+Country,0,0,0,object,No change

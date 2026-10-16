@@ -1,0 +1,40 @@
+# Data Cleaning Quality Summary
+
+**Dataset:** Online Retail  
+**Output file:** `Online_Retail_Cleaned.csv`
+
+## Dataset Overview
+- Original dataset size: 20,000 rows and 8 columns
+- Missing `Description` values: 71
+- Missing `CustomerID` values: 6,653
+- Duplicate rows before cleaning: 315
+
+## Data Cleaning Steps
+1. Converted `InvoiceDate` to datetime format.
+2. Removed rows with missing `Description` values: 71.
+3. Removed duplicate rows: 315.
+4. Removed rows where `UnitPrice` was zero: 65.
+5. Retained negative `Quantity` values for review.
+6. Retained missing `CustomerID` values.
+
+## Final Dataset Summary
+- Final dataset size: 19,549 rows and 8 columns
+- Duplicate rows remaining: 0
+- Missing `Description` values remaining: 0
+- Missing `CustomerID` values remaining: 6,517
+- Zero `UnitPrice` records remaining: 0
+- Negative `UnitPrice` records remaining: 0
+- Negative `Quantity` records retained: 261
+
+## Final Data Types
+- `InvoiceNo`: object
+- `StockCode`: object
+- `Description`: object
+- `Quantity`: int64
+- `InvoiceDate`: datetime64[ns]
+- `UnitPrice`: float64
+- `CustomerID`: float64
+- `Country`: object
+
+## Notes
+Missing `CustomerID` values were retained and should be considered during customer-level analysis. Negative quantities were retained for review rather than automatically removed.
